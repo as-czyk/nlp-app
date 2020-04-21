@@ -4,7 +4,7 @@
   "description": "This app provides the possibility to retrieve the sentiment, classification and entity of an news article",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devstart": "nodemon src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/as-czyk/nlp-app#readme",
   "dependencies": {
     "aylien_textapi": "^0.7.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
