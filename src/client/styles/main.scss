@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400');
+@import url('./dash.scss');
+@import url('./nav.scss');
+
 $base-1: #1f1c3b;
 $base-2: #2d295c;
 
@@ -5,24 +9,62 @@ $circle-1: #fa6D6e;
 $cirlce-2: #ffa335;
 $dashboard: #72DFc0;
 
-$font: 'Poppins', 'Oswald';
+$font-stack: 'Poppins', 'Oswald';
+
+/** Mixins */ 
+
+@mixin grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin grid-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Typography */
+body {
+    font-family: $font-stack;
+    h1, h2 {
+        font-family: $font-stack;
+    }
+    color: #ffffff
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
 /** Layout */ 
 
 .main__container {
     display: grid;
-    width: 95vw;
-    height: 95vh;
-    grid-template-columns: 300px 1fr;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 350px 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-    "hd hd"
-    "nav nav"
-    "ctn ctn"
-    "ft ft";
-    border: 1px solid red;
+    "nav dash"
+    "nav dash"
+    "nav dash"
+    "nav dash";
 }
 
-body {
+.dash__container {
+    grid-area: dash;
+    background-color: $base-2;
+    @include grid-row()
+}
+
+.nav__container {
     background-color: $base-1;
+    grid-area: nav;
+    padding-top: 40px;
+    @include grid-column()
 }
