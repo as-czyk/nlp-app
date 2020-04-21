@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/as-czyk/nlp-app/issues"
   },
-  "homepage": "https://github.com/as-czyk/nlp-app#readme"
+  "homepage": "https://github.com/as-czyk/nlp-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5"
+  }
 }
