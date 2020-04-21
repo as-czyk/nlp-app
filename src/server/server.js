@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.listen(PORT, () => {console.log(`The server is running on port ${PORT}`)})
-app.use(express.static('../client'));
+app.use(express.static('builds'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -24,5 +24,5 @@ app.get('/api/keys', function(req, res) {
 })
 
 app.get('/', function(req, res) {
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile(path.resolve('builds/index.html'))
 })
