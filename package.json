@@ -1,0 +1,20 @@
+{
+  "name": "nlp-app",
+  "version": "1.0.0",
+  "description": "This app provides the possibility to retrieve the sentiment, classification and entity of an news article",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as-czyk/nlp-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as-czyk/nlp-app/issues"
+  },
+  "homepage": "https://github.com/as-czyk/nlp-app#readme"
+}
