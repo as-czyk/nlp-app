@@ -34,8 +34,11 @@ app.get('/', function(req, res) {
 })
 
 app.get('/api/combined', function(req, res) {
+
+    const text = req.query.text
+
     textapi.combined({
-        'text': 'John is a very good football player!',
+        'text': text,
         'endpoint': ['language','sentiment','classify','entities','summarize']
     }, function (err, response) {
 
