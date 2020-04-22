@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400');
 @import './dash.scss';
 @import './nav.scss';
 @import './utils/theme.scss';
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400');
+@import './utils/animations.scss';
+
 
 /** Typography */
 body {
@@ -21,8 +23,6 @@ body {
 
 .main__container {
     display: grid;
-    width: 100vw;
-    height: 100vh;
     grid-template-columns: 350px 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 

@@ -15,11 +15,57 @@
                 <input placeholder = "Analyze your URL" id = "input__url">
                 <button id = "submit__button">Analyze</button>
             </div>
+            <div class = "placeholder"></div>
         </nav>
         <section class = "dash__container">
-            <h1>Hello World</h1>
+            <div class = "result__container">
+                <div class = "language__container">
+                    <h2>Language</h2>
+                    <div class = "result__wrapper">
+                        <div id = "lang__confidence">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="124px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path class = "circle" d="M255.832,56.037c110.44,0.096,199.891,89.691,199.795,200.131s-89.691,199.891-200.131,199.795C145.127,455.867,55.701,366.368,55.701,256C55.877,145.568,145.399,56.117,255.832,56.037 M255.832,0C114.443,0.096-0.096,114.779,0,256.168S114.779,512.096,256.168,512C397.485,511.904,512,397.317,512,256C511.952,114.571,397.261-0.048,255.832,0z"/>
+                                <foreignObject class = "text__wrapper">
+                                    <text id = "text__confidence"></text>
+                                </foreignObject>
+                            </svg>
+                        </div>
+                        <p id = "result__lang"></p>
+                    </div>
+                </div>
+                <div class = "entity__container">
+                    <h2>Entities</h2>
+
+                </div>
+                <div class = "classify__container">
+                    <h2>Classification</h2>
+                    <div class = "result__wrapper">
+                        <div id = "classify__confidence">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124px" height="124px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path class = "circle" d="M255.832,56.037c110.44,0.096,199.891,89.691,199.795,200.131s-89.691,199.891-200.131,199.795C145.127,455.867,55.701,366.368,55.701,256C55.877,145.568,145.399,56.117,255.832,56.037 M255.832,0C114.443,0.096-0.096,114.779,0,256.168S114.779,512.096,256.168,512C397.485,511.904,512,397.317,512,256C511.952,114.571,397.261-0.048,255.832,0z"/>
+                                <foreignObject class = "text__wrapper">
+                                    <text id = "text__classify__confidence"></text>
+                                </foreignObject>
+                            </svg>
+                        </div>
+                        <div class = "result__classify__wrapper">
+                            <p id = "result__classify"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "summarize__container">
+                    <h2>Summarization</h2>
+
+                </div>
+            </div>
             <p id = "test"></p>
         </section>
     </main>
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="linear__gradient__template" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffa335" />
+          <stop offset="100%" stop-color="#fa6D6e" />
+        </linearGradient>
+      </svg>
 </body>
 </html>
