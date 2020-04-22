@@ -1,9 +1,14 @@
 import { getAnalysisData } from './aylien.js'
 
 const button = document.getElementById('submit__button')
-const testInput = document.getElementById('test')
 const textInput = document.querySelector('#input__text')
 const urlInput = document.querySelector('#input__url')
+
+const perLanguage = document.querySelector('#text__confidence')
+const language = document.querySelector('#result__lang')
+
+const perClassify = document.querySelector('#text__classify__confidence')
+const classify = document.querySelector('#result__classify')
 
 function verfiyInput() {
     
@@ -25,8 +30,11 @@ async function updateUI() {
     const response = await getAnalysisData(textInput.value || urlInput.value)
 
     try {
-        console.log(response)
-        testInput.innerHTML = response.text
+        perLanguage.textContent = `${(Math.round(response.results[0].result.confidence)) * 100} %`
+        language.textContent = response.results[0].result.lang
+        perClassify.textContent = `${(response.results[2].result.categories[0].confidence) * 100} %`
+        classify.textContent = response.results[2].result.categories[0].label
+        
     } catch (err) {
         console.log(err)
     }

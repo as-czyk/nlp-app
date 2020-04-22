@@ -28,6 +28,13 @@ module.exports = {
                     loader: 'sass-loader',
                     },
                 ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
             }
         ]
     },
