@@ -1,0 +1,25 @@
+$base-1: #1f1c3b;
+$base-2: #2d295c;
+
+$circle1: #fa6D6e;
+$cirlce2: #ffa335;
+$dashboard: #72DFc0;
+
+$font-stack: 'Poppins', 'Oswald';
+$font-color: #ffffff;
+
+/** Mixins */ 
+
+@mixin grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin grid-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
