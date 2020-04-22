@@ -1,2 +1,33 @@
-@use 'grid-column';
-@use 'grid-row';
+@import './utils/theme.scss';
+
+.language__container {
+    @include box-template()
+}
+
+.entity__container {
+    @include box-template()
+}
+
+.classify__container {
+    @include box-template()
+}
+
+.summarize__container {
+    @include box-template()   
+}
+
+.result__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.result__wrapper {
+    @include grid-row();
+    justify-content: space-around;
+    border: 1px solid red;
+    margin-top: 20px;
+    width: 80%;
+    height: 70%
+}
