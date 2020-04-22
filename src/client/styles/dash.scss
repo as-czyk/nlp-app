@@ -26,8 +26,41 @@
 .result__wrapper {
     @include grid-row();
     justify-content: space-around;
-    border: 1px solid red;
     margin-top: 20px;
     width: 80%;
     height: 70%
+}
+
+/** Style for Result Language*/
+#text__confidence {
+    font-family: $font-stack;
+    font-size: 65px;
+    fill: $font-color;
+}
+
+.text__wrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#result__lang {
+    font-size: 25px;
+}
+
+/** Style for Result Classification */
+
+.result__classify__wrapper {
+    height: 80%;
+    width: 40%;
+    @include grid-column();
+    justify-content: center;
+    text-align: center;
+}
+
+#text__classify__confidence {
+    font-family: $font-stack;
+    font-size: 65px;
+    fill: $font-color;
 }

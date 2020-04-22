@@ -11,6 +11,7 @@
 
     width: 270px;
     height: 20vh;
+    margin-top: 20px;
     font-family: $font-stack;
     font-size: 16px;
     padding: 20px;
@@ -28,7 +29,7 @@
 #input__url {
     font-family: $font-stack;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 270px;
     height: 5px;
 
@@ -45,7 +46,7 @@
     width: 250px;
     height: 50px;
     border-radius: 50px;
-    margin-top: 30px;
+    margin-top: 50px;
     background-image: linear-gradient(to right,$cirlce2 0%, $circle1 100%);
     border: none;
     font-size: 18px;
@@ -64,6 +65,10 @@
     &:active {
         transform: scale(0.99);
     }
+}
+
+.placeholder {
+    height: 100px;
 }
 
 .input__wrapper {
