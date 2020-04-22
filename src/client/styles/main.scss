@@ -1,31 +1,7 @@
+@import './dash.scss';
+@import './nav.scss';
+@import './utils/theme.scss';
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400');
-@import url('./_dash.scss');
-@import url('./_nav.scss');
-
-$base-1: #1f1c3b;
-$base-2: #2d295c;
-
-$circle-1: #fa6D6e;
-$cirlce-2: #ffa335;
-$dashboard: #72DFc0;
-
-$font-stack: 'Poppins', 'Oswald';
-
-/** Mixins */ 
-
-@mixin grid-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-@mixin grid-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 /** Typography */
 body {
@@ -67,4 +43,19 @@ body {
     grid-area: nav;
     padding-top: 40px;
     @include grid-column()
+}
+
+@media (max-width: 515px) {
+    .main__container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "nav"
+        "nav"
+        "dash"
+        "dash";
+    }
 }
