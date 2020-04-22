@@ -8,7 +8,9 @@ module.exports = {
     stats: 'verbose',
     output: {
         filename: 'main.js',
-        path: path.resolve('./builds')
+        path: path.resolve('./builds'),
+        libraryTarget: 'var',
+        library: 'Client'
     },
     module: {
         rules: [
