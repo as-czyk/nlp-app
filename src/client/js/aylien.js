@@ -10,4 +10,16 @@ async function getAnalysisData(input) {
     }
 }
 
-export { getAnalysisData }
+async function getAnalysisDataUrl(input) {
+
+    const data = await fetch (`http://localhost:3030/api/combined?url=${input}`)
+
+    try {
+        const res = await data.json();
+        return res
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export { getAnalysisData, getAnalysisDataUrl }

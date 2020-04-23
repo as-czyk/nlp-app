@@ -30,12 +30,13 @@ body {
     "nav dash"
     "nav dash"
     "nav dash";
+    background-color: $base-2;
 }
 
 .dash__container {
     grid-area: dash;
     background-color: $base-2;
-    @include grid-row()
+    @include grid-row();
 }
 
 .nav__container {
@@ -48,14 +49,13 @@ body {
 @media (max-width: 515px) {
     .main__container {
         display: grid;
-        width: 100vw;
-        height: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
         "nav"
-        "nav"
         "dash"
-        "dash";
+    }
+    .placeholder {
+        height: 40px;
     }
 }

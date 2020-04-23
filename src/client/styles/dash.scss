@@ -13,6 +13,11 @@
 }
 
 .summarize__container {
+    @include box-template();
+    height: auto;  
+}
+
+.sentiment__container {
     @include box-template()   
 }
 
@@ -28,7 +33,7 @@
     justify-content: space-around;
     margin-top: 20px;
     width: 80%;
-    height: 70%
+    height: 70%;
 }
 
 /** Style for Result Language*/
@@ -46,11 +51,17 @@
 }
 
 #result__lang {
-    font-size: 25px;
+    font-weight: bold;
+}
+
+.text__wrapper__result {
+    height: 80%;
+    width: 40%;
+    @include grid-column();
+    justify-content: center;
 }
 
 /** Style for Result Classification */
-
 .result__classify__wrapper {
     height: 80%;
     width: 40%;
@@ -63,4 +74,45 @@
     font-family: $font-stack;
     font-size: 65px;
     fill: $font-color;
+}
+
+/** Style for Rsult Sentiment */
+#text__sentiment__confidence {
+    font-family: $font-stack;
+    font-size: 65px;
+    fill: $font-color;
+}
+
+/** Style for Result Entity */ 
+#entitiy__wrapper {
+    @include grid-row();
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 80%;
+    height: 70%;
+    word-wrap: wrap;
+    word-break: break-all;
+
+    p {
+        line-height: 35px;
+    }
+}
+
+//** Style for Summarize */
+.summarize__wrapper {
+    @include grid-row();
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 80%;
+    height: 70%;
+    word-wrap: wrap;
+    word-break: break-all;
+}
+
+/** Inactive Dash Container */
+
+.dash__inactive {
+    display: none;
 }
