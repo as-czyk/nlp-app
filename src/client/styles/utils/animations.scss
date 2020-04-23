@@ -3,3 +3,68 @@
 .circle {
     fill: url(#linear__gradient__template);
 }
+
+/** Swiggle Animation */ 
+.error__text {
+    display: none;
+}
+
+.error__active {
+    margin-top: 20px;
+    color: red;
+}
+
+.swiggle__error__shake {
+    animation: shake 0.5s;
+    border: 3px solid red;
+
+    @keyframes shake {
+        0% {transform: translate3d(-1px, 0, 0)}
+        15% {transform: translate3d(3px, 0, 0)}
+        30% {transform: translate3d(-3px, 0, 0)}
+        45% {transform: translate3d(6px, 0, 0)}
+        60% {transform: translate3d(-6px, 0, 0)}
+        75% {transform: translate3d(3px, 0, 0)}
+        90% {transform: translate3d(-3px, 0, 0);}
+        100% {transform: translate3d(1px, 0, 0);}
+    }
+}
+
+/** Circle Animation */ 
+.circle__animation {
+    width: 80%; 
+    height: 90%;
+    border: 1px solid red;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.circle__medium {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: relative;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    opacity: 1;
+    transition: ease 0.5s all;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
+
+.circle__inactive {
+    display: none;
+}
