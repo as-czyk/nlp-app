@@ -1,1 +1,3 @@
-{'presets': ['@babel/reset-env']}
+{
+    'presets': ['@babel/preset-env']
+}

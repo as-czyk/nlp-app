@@ -5,7 +5,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-
 module.exports = {
     entry: './src/client/app.js',
     mode: 'production',
